@@ -14,7 +14,10 @@ library(tidyverse)
 ```{r}
 
 class_list <- read.csv(file = "cold_call_names")
-my_cold_call = function(){sample(nrow(class_list, 1), ), replace = TRUE}
+my_cold_call = function() {
+  sample_n(class_list, 1, replace = TRUE) %>%
+  print(first)
+}
 
 my_cold_call()
 ```
